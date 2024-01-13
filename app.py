@@ -11,8 +11,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.firefox import GeckoDriverManager
 
 # URL = "http://github.com"
-URL = "https://replit.com/"
-
 
 
 st.title("Test Selenium")
@@ -29,7 +27,8 @@ driver = webdriver.Firefox(
     options=firefoxOptions,
     service=service,
 )
-driver.get(URL)
+
+driver.get(st.secrets["URL"])
 
 time.sleep(3)
 
