@@ -20,6 +20,13 @@ st.markdown("You should see some random Football match text below in about 21 se
 
 firefoxOptions = Options()
 firefoxOptions.add_argument("--headless")
+
+firefoxOptions.add_argument("--disable-gpu")
+user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 S```afari/537.36'
+firefoxOptionss.add_argument(f'user-agent={user_agent}')
+firefoxOptions.add_experimental_option("excludeSwitches",['enable-automation'])
+firefoxOptions.add_experimental_option('useAutomationExtension', False)
+
 service = Service(GeckoDriverManager().install())
 driver = webdriver.Firefox(
     options=firefoxOptions,
