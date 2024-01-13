@@ -10,7 +10,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.firefox import GeckoDriverManager
 
-URL = "http://github.com"
+# URL = "http://github.com"
+URL = "https://replit.com/"
 
 
 
