@@ -21,7 +21,8 @@ firefoxOptions = Options()
 firefoxOptions.add_argument("--headless")
 
 firefoxOptions.add_argument("--disable-gpu")
-
+user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 S```afari/537.36'
+firefoxOptions.add_argument(f'user-agent={user_agent}')
 
 service = Service(GeckoDriverManager().install())
 driver = webdriver.Firefox(
