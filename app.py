@@ -36,8 +36,12 @@ time.sleep(3)
 driver.delete_all_cookies()
 
 #添加cookies
+
 time.sleep(2)
-for key, value in st.secrets["cookies_dict"].items():
+
+c=st.secrets["cookies_dict"]
+
+for key, value in c.items():
     driver.add_cookie({'name': key, 'value': value})
 
 time.sleep(2)
