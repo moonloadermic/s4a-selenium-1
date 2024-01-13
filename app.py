@@ -28,7 +28,7 @@ driver = webdriver.Firefox(
     service=service,
 )
 
-driver.get(st.secrets[URL])
+driver.get(st.secrets["URL"])
 
 time.sleep(3)
 
